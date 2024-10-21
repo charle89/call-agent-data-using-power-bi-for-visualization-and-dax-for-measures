@@ -1,7 +1,5 @@
 call agent data using power bi for visualization and dax for measures
-Here's a detailed write-up for your README file on GitHub for the call center data analysis project using Power BI:
 
----
 
 Call Center Data Analysis Using Power BI
 
@@ -36,15 +34,39 @@ Analysis Highlights
 
 Results and Insights
 
-- Improved Agent Training:** Insights from the analysis highlighted the need for targeted training for agents with lower resolution rates, particularly in specific call topics.
-- Optimized Call Handling:** By identifying peak call times, recommendations were made to adjust staffing levels to reduce wait times and improve customer satisfaction.
-- Enhanced Performance Metrics:** The quadrant analysis helped in recognizing top-performing agents, which can be used for incentive programs and setting benchmarks for others.
+Customer Satisfaction: Calculated the overall customer satisfaction score and identified factors that contribute to higher or lower satisfaction levels.
+- Call Resolution: Analyzed the resolution rates across different call topics and identified areas for improvement.
+- Agent Performance Quadrant: Created a quadrant analysis comparing agents' average handle time against the number of calls answered to identify top performers and areas needing improvement.
+- Call Time Analysis: Visualized call volumes by time of day to identify peak periods and ensure adequate staffing during high-demand hours.
+
+Results and Insights
+
+- Improved Agent Training: Insights from the analysis highlighted the need for targeted training for agents with lower resolution rates, particularly in specific call topics.
+- Optimized Call Handling: By identifying peak call times, recommendations were made to adjust staffing levels to reduce wait times and improve customer satisfaction.
+- Enhanced Performance Metrics: The quadrant analysis helped in recognizing top-performing agents, which can be used for incentive programs and setting benchmarks for others.
 
 Tools Used
 
 - Power BI: For data visualization and dashboard creation.
 - Power Query: For data cleaning, transformation, and preparation within Power BI.
 - DAX (Data Analysis Expressions): For calculating custom metrics and KPIs.
+- 
+- RECCOMENDATION
+- 
+  FOCUS ON FASTER RESPONSE TIMES:
+
+Agents should aim to reduce the average speed of answer to below 30 seconds, as quicker responses generally lead to higher satisfaction.
+
+IMPROVE RESOLUTION IN TECHNICAL SUPPORT:
+
+Enhance training for technical support issues to increase resolution rates, which directly impacts customer satisfaction.
+INCREASE SATISFACTION FOR PAYMENT-RELATED QUERIES:
+
+Explore causes behind low satisfaction in payment-related queries and implement process improvements or additional agent support.
+
+USE DATA TO TAILOR AGENT TRANING:
+
+Agents like Stewart and Greg who excel at fast and resolved calls can mentor others to improve overall performance.
 
 Conclusion
 
