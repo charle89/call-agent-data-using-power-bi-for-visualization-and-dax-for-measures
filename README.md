@@ -1,75 +1,141 @@
-call agent data using power bi for visualization and dax for measures
+Executive Summary
+
+This project analyzes call center operational data to evaluate agent performance, service efficiency, and customer satisfaction metrics. Using Power BI and DAX, I developed an interactive dashboard that transforms raw call data into measurable KPIs and strategic insights for operational decision-making.
+
+The dashboard enables supervisors and operations managers to monitor performance trends, identify inefficiencies, and implement data-driven improvements.
+
+🎯 Business Objective
+
+Call centers operate in high-volume environments where performance visibility is critical. However, without structured reporting, it becomes difficult to:
+
+Monitor agent productivity
+
+Track resolution effectiveness
+
+Optimize staffing during peak hours
+
+Improve customer satisfaction outcomes
+
+This project was designed to provide a centralized performance monitoring dashboard to support operational optimization.
+
+📊 Dataset Overview
+
+The dataset includes:
+
+Field	Description
+Agent ID	Unique identifier for each agent
+Date & Time	Timestamp of each call
+Topic	Call subject/category
+Answered (Y/N)	Whether the call was answered
+Call ID	Unique call identifier
+Resolved (Y/N)	Whether issue was resolved
+Speed of Answer	Time taken to answer (seconds)
+Average Talk Duration	Length of agent-customer conversation
+Satisfaction Rating	Customer satisfaction score (1–5)
+🛠 Tools & Technologies
+
+Power BI Desktop – Data modeling and dashboard design
+
+Power Query – Data cleaning and transformation
+
+DAX (Data Analysis Expressions) – KPI calculations and advanced metrics
+
+Excel / CSV – Data source
+
+📈 Key KPIs Developed
+
+Total Calls Handled
+
+Call Resolution Rate (%)
+
+Average Speed of Answer
+
+Average Handle Time
+
+Customer Satisfaction Score
+
+Agent Performance Index
+
+Call Volume by Time of Day
+
+🔎 Analytical Approach
+1️⃣ Data Preparation
+
+Cleaned and structured dataset using Power Query
+
+Standardized categorical variables (Answered, Resolved)
+
+Created calculated columns for analysis
+
+2️⃣ KPI Modeling with DAX
+
+Developed measures to calculate:
+
+Total Calls = COUNTROWS('CallData')
+Resolution Rate % =
+DIVIDE(
+    CALCULATE([Total Calls], 'CallData'[Resolved] = "Y"),
+    [Total Calls]
+)
+Average Speed of Answer = AVERAGE('CallData'[Speed of Answer])
+3️⃣ Dashboard Development
+
+KPI cards for executive-level visibility
+
+Trend visualizations (time-of-day analysis)
+
+Agent performance quadrant (Handle Time vs Calls Answered)
+
+Topic-based resolution analysis
+
+Interactive slicers for dynamic filtering
+
+📊 Key Insights
+Customer Satisfaction
+
+Higher resolution rates strongly correlated with improved satisfaction scores.
+
+Faster response times positively influenced overall customer experience.
+
+Agent Performance
+
+Quadrant analysis identified top-performing agents with both high volume and efficient handling time.
+
+Certain agents demonstrated high talk duration but lower resolution effectiveness, indicating training opportunities.
+
+Call Volume Trends
+
+Peak call periods identified during specific hours, suggesting staffing adjustments could reduce wait times.
+
+💼 Business Impact
+
+The dashboard enables:
+
+Real-time monitoring of operational efficiency
+
+Identification of underperforming service categories
+
+Data-driven staffing decisions during peak demand
+
+Structured agent performance evaluation
+
+ Strategic Recommendations
+
+1. Reduce Response Time
+Target average speed of answer below 30 seconds to improve satisfaction metrics.
+
+2. Improve Technical Issue Resolution
+Provide targeted training for technical support queries to increase first-call resolution rates.
+
+3. Address Payment-Related Dissatisfaction
+Investigate root causes behind lower satisfaction in billing/payment topics.
+
+4. Implement Peer Mentorship
+Leverage top-performing agents (e.g., high resolution & low handle time) to mentor others.
+
+📊 Dashboard Preview
 
 
-Call Center Data Analysis Using Power BI
+🧠 Conclusion
 
-Project Overview
-
-This project focuses on analyzing call center data to uncover key performance metrics and provide actionable insights into the efficiency and effectiveness of call center operations. By leveraging Power BI, I created interactive dashboards and reports that offer a comprehensive view of various call center metrics, enabling data-driven decision-making to improve overall customer service and agent performance.
-
-Objectives
-Analyze Call Center Performance: Evaluate key performance indicators (KPIs) such as overall customer satisfaction, call resolution rates, average speed of answer, and agent performance.
-- Identify Trends and Patterns: Discover trends in call volumes, peak call times, and factors affecting customer satisfaction.
-- Agent Performance Analysis: Assess agent efficiency by analyzing average handle time, call resolution rates, and the number of calls answered.
-
- Data Description
-
-The dataset includes the following key columns:
-- Agent ID: Unique identifier for each call center agent.
-- Date and Time: Timestamp of each call.
-- Topic: The subject matter of the call.
-- Answered (Y/N): Indicator of whether the call was answered.
-- Call ID: Unique identifier for each call.
-- Resolved (Y/N): Whether the issue was resolved during the call.
-- Speed of Answer: Time taken to answer the call, measured in seconds.
-- Average Talk Duration: Average duration of conversations between agents and customers.
-- Satisfaction Rating: Customer satisfaction score, typically on a scale of 1 to 5.
-
-Analysis Highlights
-
-- Customer Satisfaction: Calculated the overall customer satisfaction score and identified factors that contribute to higher or lower satisfaction levels.
-- Call Resolution: Analyzed the resolution rates across different call topics and identified areas for improvement.
-- Agent Performance Quadrant: Created a quadrant analysis comparing agents' average handle time against the number of calls answered to identify top performers and areas needing improvement.
-- Call Time Analysis: Visualized call volumes by time of day to identify peak periods and ensure adequate staffing during high-demand hours.
-
-Results and Insights
-
-Customer Satisfaction: Calculated the overall customer satisfaction score and identified factors that contribute to higher or lower satisfaction levels.
-- Call Resolution: Analyzed the resolution rates across different call topics and identified areas for improvement.
-- Agent Performance Quadrant: Created a quadrant analysis comparing agents' average handle time against the number of calls answered to identify top performers and areas needing improvement.
-- Call Time Analysis: Visualized call volumes by time of day to identify peak periods and ensure adequate staffing during high-demand hours.
-
-Results and Insights
-
-- Improved Agent Training: Insights from the analysis highlighted the need for targeted training for agents with lower resolution rates, particularly in specific call topics.
-- Optimized Call Handling: By identifying peak call times, recommendations were made to adjust staffing levels to reduce wait times and improve customer satisfaction.
-- Enhanced Performance Metrics: The quadrant analysis helped in recognizing top-performing agents, which can be used for incentive programs and setting benchmarks for others.
-
-Tools Used
-
-- Power BI: For data visualization and dashboard creation.
-- Power Query: For data cleaning, transformation, and preparation within Power BI.
-- DAX (Data Analysis Expressions): For calculating custom metrics and KPIs.
-- 
-- RECCOMENDATION
-- 
-  FOCUS ON FASTER RESPONSE TIMES:
-
-Agents should aim to reduce the average speed of answer to below 30 seconds, as quicker responses generally lead to higher satisfaction.
-
-IMPROVE RESOLUTION IN TECHNICAL SUPPORT:
-
-Enhance training for technical support issues to increase resolution rates, which directly impacts customer satisfaction.
-INCREASE SATISFACTION FOR PAYMENT-RELATED QUERIES:
-
-Explore causes behind low satisfaction in payment-related queries and implement process improvements or additional agent support.
-
-USE DATA TO TAILOR AGENT TRANING:
-
-Agents like Stewart and Greg who excel at fast and resolved calls can mentor others to improve overall performance.
-
-Conclusion
-
-This project demonstrates the power of data analytics in optimizing call center operations. By using Power BI, I was able to turn raw data into meaningful insights that can help improve customer satisfaction, streamline call handling processes, and enhance overall call center performance.
-
- 
+This project demonstrates how data analytics can optimize call center operations by translating raw service data into structured KPIs and actionable insights. By leveraging Power BI and DAX, operational data was transformed into a strategic performance monitoring system that supports measurable improvements in customer satisfaction and agent efficiency.
